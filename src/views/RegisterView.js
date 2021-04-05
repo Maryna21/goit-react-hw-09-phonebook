@@ -31,27 +31,6 @@ export default function RegisterView() {
     setPassword(e.target.value);
   };
 
-  // const handleChange = e => {
-  //   const { name, value } = e.target;
-
-  //   switch (name) {
-  //     case 'name':
-  //       setName(value);
-  //       break;
-      
-  //     case 'email':
-  //       setEmail(value);
-  //       break;
-      
-  //     case 'password':
-  //       setPassword(value);
-  //       break;
-      
-  //     default:
-  //       console.warn(`тип name - ${name} немає`)
-  //   }
-  // }
-
   const handleSubmit = e => {
     e.preventDefault();
 

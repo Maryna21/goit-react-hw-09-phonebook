@@ -23,7 +23,6 @@ export default function UserMenu() {
   const dispatch = useDispatch();
   const name = useSelector(authSelectors.getUsername);
   
- 
   const onLogout = useCallback(() => {
     dispatch(authOperations.logOut())}, 
     [dispatch]);

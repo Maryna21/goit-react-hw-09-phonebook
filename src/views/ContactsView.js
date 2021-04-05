@@ -9,10 +9,15 @@ import logoTransition from 'logoTransition.module.css';
 import { useSelector, useDispatch } from 'react-redux';
 import contactsOperations from 'redux/contacts-operations';
 import { getLoading } from 'redux/contacts-selectors';
+import authOperations from 'redux/auth/auth-operations';
 
 export default function ContactsView() {
   const dispatch = useDispatch();
   const isloadingContacts = useSelector(getLoading);
+
+  useEffect(() => {
+    dispatch(authOperations.getCurrentUser());
+   }, [dispatch]);
 
   useEffect(() => {
     dispatch(contactsOperations.fetchContacts())
